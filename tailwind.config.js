@@ -21,7 +21,8 @@ module.exports = {
       'fontcolor':'#ccd6f6',
       'fontnude':'#a8b2d1',
       'newblue':'#112240',
-      'newgreen':"#60e8cf"
+      'newgreen':"#60e8cf",
+      'black': "#000000"
 
     },
     extend: {
@@ -30,7 +31,7 @@ module.exports = {
         'robot':['RobotoMono','monospace']
       },
       screens: {
-        'phone':'480px',
+        'phone':'680px',
  
        'tablet': '810px',
        // => @media (min-width: 640px) { ... }
@@ -43,5 +44,5 @@ module.exports = {
      },
     },
   },
-  plugins: [require('tailwind-scrollbar'),],
+  plugins: [require('tailwind-scrollbar')],
 }

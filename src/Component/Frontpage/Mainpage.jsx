@@ -4,7 +4,7 @@ import Body from './Members/Body'
 
 const Mainpage = () => {
   return (
-    <div className=' bg-greennude'>
+    <div className=' bg-greennude '>
         <Toppage/>
         <Body/>
     </div>

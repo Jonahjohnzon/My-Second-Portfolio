@@ -1,13 +1,12 @@
 import React from 'react'
 import { Mobile } from '../../../Experience'
-import {FaExternalLinkAlt} from 'react-icons/fa'
 import {FiGithub} from 'react-icons/fi'
 const App = () => {
   const List =()=>{
     const data=Mobile.map((e)=>{
    return(
     <div>
-      <div className=' flex  tablet:items-center mb-20' style={{flexDirection:e.flexact,justifyContent:"space-between"}}>
+      <div className=' flex  tablet:items-center mb-20 overflow-hidden' style={{flexDirection:e.flexact,justifyContent:"space-between"}}>
       <div className=' w-full'>
       <div>
           <div className=' text-textgreen font-robot'>Web Project</div>
@@ -18,7 +17,7 @@ const App = () => {
             <div className=' flex flex-wrap text-xs text-textgreen font-robot '>{
               e.Tech.map((e)=>{
                 return(
-                  <div><div className='mt-2 px-3 '>{e}</div></div>
+                  <div><div className='mt-2 pr-2  phone:px-3 '>{e}</div></div>
                 )
               })
             }</div>
@@ -40,7 +39,7 @@ const App = () => {
         </div>
       </div>
       <div className='w-full tablet:flex justify-center hidden'>
-      <a href={e.Website}><div className=' w-60 rounded-lg overflow-hidden shadow-lg relative'><div className=' bg-textgreen w-full h-full absolute opacity-20 hover:opacity-0 cursor-pointer'></div><img src={e.image}/></div></a></div>
+      <a href={e.Website}><div className=' w-60 rounded-lg overflow-hidden shadow-lg relative'><div className=' bg-textgreen w-full h-full absolute opacity-20 hover:opacity-0 cursor-pointer'></div><img src={e.image} alt='image' className=" w-full"/></div></a></div>
       </div>
     </div>
    )
@@ -48,9 +47,9 @@ const App = () => {
     return data
   }
   return (
-    <div className='mt-20 mb-20' id='app'>
+    <div className='phone:mt-20 mb-20' id='app'>
           <div className='flex justify-center pb-10'>
-        <div className=' laptop:w-1/2 w-3/4'>
+        <div className=' laptop:w-1/2 w-[92%]'>
         <div className='flex items-center mb-20'><span className=' tablet:text-xl font-robot text-textgreen mr-2'>03.</span><div className=' font-semibold text-xl whitespace-nowrap tablet:text-3xl text-fontcolor mr-10'>Mobile Applications</div><div className='w-full bg-fontnude h-[1px] opacity-50'></div></div>
         <div><List/></div>
         </div>

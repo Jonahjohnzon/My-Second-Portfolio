@@ -9,9 +9,9 @@ const Navbar = () => {
     const [data,setdata]=useState('')
     const [display,setDisplay]=useState(false)
     
-    window.addEventListener('scroll',()=>{
+    useEffect(()=>{window.addEventListener('scroll',()=>{
     setdata(window.scrollY)
-    })
+    })})
  
     useEffect(()=>{
      if(data>=20){
@@ -98,7 +98,7 @@ const Navbar = () => {
         }
   return (
     <div>
-    <motion.div animate={anime} className=' w-full bg-greennude bg-opacity-95 flex justify-center fixed top-0 z-50'>
+    <motion.div animate={anime} className=' w-full bg-greennude  flex justify-center fixed top-0 z-50 overflow-hidden'>
         <motion.div variants={slide} initial='hidden' animate='show' className='flex justify-between w-[95%] py-8'>
             <div className='text-textgreen'>
                 <div className='flex pl-5'>
@@ -122,30 +122,30 @@ const Navbar = () => {
                 offset={-80}
                 duration={500}><motion.li variants={children} className='flex mr-8 items-center cursor-pointer'><span className='mr-1 font-robot text-xs'>01.</span> <div className=' text-fontcolor hover:text-textgreen'>About</div></motion.li></Link>
                          <Link             
-                 to='about'spy={true}
+                 to='web'spy={true}
                 smooth={true}
                 hashSpy={true}
                 offset={-80}
                 duration={500}><motion.li variants={children} className='flex  mr-8 items-center cursor-pointer'><span className='mr-1 font-robot text-xs'>02.</span> <div className=' text-fontcolor hover:text-textgreen'>Web Project</div></motion.li></Link> 
                           <Link             
-                 to='about'spy={true}
+                 to='app'spy={true}
                 smooth={true}
                 hashSpy={true}
                 offset={-80}
                 duration={500}><motion.li variants={children} className='flex  mr-8 items-center cursor-pointer'><span className='mr-1 font-robot text-xs'>03.</span> <div className=' text-fontcolor hover:text-textgreen'>Mobile</div></motion.li></Link>
                          <Link             
-                 to='about'spy={true}
+                 to='contact'spy={true}
                 smooth={true}
                 hashSpy={true}
                 offset={-80}
                 duration={500}><motion.li variants={children} className='flex  mr-8 items-center cursor-pointer'><span className='mr-1 font-robot text-xs'>04.</span> <div className=' text-fontcolor hover:text-textgreen'>Contact</div></motion.li></Link> 
-                        <a href="https://drive.google.com/file/d/1sXfFhCfFIhiD9FQXIr8-7MA2DH2gGPJK/view?usp=share_link"><motion.div variants={children} className=' border-textgreen border-[1px] py-2 px-4 rounded-md cursor-pointer hover:bg-textgreen hover:bg-opacity-10 transition ease-in-out duration-300'>Resume</motion.div></a>
+                        <a href="https://drive.google.com/file/d/1zgYqmwS0uf1nkTbW7_aE9x_6vcyvIfAe/view?usp=sharing"><motion.div variants={children} className=' border-textgreen border-[1px] py-2 px-4 rounded-md cursor-pointer hover:bg-textgreen hover:bg-opacity-10 transition ease-in-out duration-300'>Resume</motion.div></a>
                     </ul>
                 </div>
             </div>
         </motion.div>
     </motion.div>
-    <motion.div animate={animes} className=' w-full bg-greennude bg-opacity-95 flex justify-center fixed top-0 z-30 shadow-xl'>
+    <motion.div animate={animes} className=' w-full bg-greennude bg-opacity-95 flex justify-center fixed top-0 z-30 shadow-sm'>
         <div className='flex justify-between w-[95%] py-8'>
             <div className='text-textgreen'>
                 <div className='flex pl-5'>
@@ -186,7 +186,7 @@ const Navbar = () => {
                 hashSpy={true}
                 offset={-80}
                 duration={500}><li className='flex  mr-8 items-center cursor-pointer'><span className='mr-1 font-robot text-xs'>04.</span> <div className=' text-fontcolor hover:text-textgreen'>Contact</div></li></Link>
-                        <a href="https://drive.google.com/file/d/1sXfFhCfFIhiD9FQXIr8-7MA2DH2gGPJK/view?usp=share_link"><div className=' border-textgreen border-[1px] py-2 px-4 rounded-md cursor-pointer hover:bg-textgreen hover:bg-opacity-10 transition ease-in-out duration-300'>Resume</div></a>
+                        <a href="https://drive.google.com/file/d/1zgYqmwS0uf1nkTbW7_aE9x_6vcyvIfAe/view?usp=sharing"><div className=' border-textgreen border-[1px] py-2 px-4 rounded-md cursor-pointer hover:bg-textgreen hover:bg-opacity-10 transition ease-in-out duration-300'>Resume</div></a>
                     </ul>
                 </div>
             </div>

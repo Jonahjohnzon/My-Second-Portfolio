@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAnimation,motion } from 'framer-motion'
+import {motion } from 'framer-motion'
 const Toppage = () => {
   const slide={
     hidden:{
@@ -30,7 +30,7 @@ const Toppage = () => {
       y:0
     }}
   return (
-    <motion.div  variants={slide} initial='hidden' animate='show' className='h-[100vh] flex items-center' id="home">
+    <motion.div  variants={slide} initial='hidden' animate='show' className='h-[100vh] overflow-hidden flex items-center'>
      <div className=' ml-10 tablet:ml-[24vw]' >
         <div className=' text-start'>
             <motion.div variants={children} className=' text-textgreen  text-lg font-firacode break-words tracking-widest ml-2'>Hi, my name is</motion.div>
@@ -39,7 +39,7 @@ const Toppage = () => {
             <motion.div variants={children} className=' text-fontnude w-2/3 laptop:w-1/2 my-8 mb-12 text-lg text leading-6'>
      I'm a professional fullstack web and mobile developer based in Nigeria. Currently, I'm focused on buiding websites with a secured backend. </motion.div>
      <motion.div variants={children} className='border-textgreen border-[1px] w-fit rounded-md '>
-     <a href='https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtVbFlRBkNFtDTDbjpgnhwkjvZQdfMZdGfkxfnKkWMsqJgxzXPhHRzdHkwSMDTwwgXGxkFhq'><div className=' text-textgreen  font-firacode tracking-widest py-3 px-14 cursor-pointer hover:bg-textgreen hover:bg-opacity-10 transition ease-in-out duration-300'>Get in touch!</div></a>
+     <a href='https://mail.google.com/mail/u/0/?fs=1&to=jonahjohnzon@gmail.com&su=Hello&body=Hi+Jonah&tf=cm'><div className=' text-textgreen  font-firacode tracking-widest py-3 px-14 cursor-pointer hover:bg-textgreen hover:bg-opacity-10 transition ease-in-out duration-300'>Get in touch!</div></a>
      </motion.div>
 
         </div>
